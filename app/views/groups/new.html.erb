@@ -2,30 +2,7 @@
   <h4>新增影评<h4>
 
   <hr>
-  <%= form_for @group do |f| %>
 
-  <% if @group.errors.any? %>
-  <ul>
-    <% @group.errors.full_messages.each do |哈哈| %>
-      <li><%= 哈哈 %></li>
-    <% end %>
-  </ul>
-  <% end %>
-
-  <br>
-  电影名称
-  <br>
-  <%= f.text_field :name %>
-  <br
-  <br>
-  <br>
-  <br>
-  你的评论
-  <br>
-  <%= f.text_area :description %>
-  <br>
-
-  <%= f.submit "Submit", :disable_with => "Submiting..." %>
-  <% end %>
+  <%= render "form" %>
 
 </div>
