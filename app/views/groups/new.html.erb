@@ -3,6 +3,15 @@
 
   <hr>
   <%= form_for @group do |f| %>
+
+  <% if @group.errors.any? %>
+  <ul>
+    <% @group.errors.full_messages.each do |哈哈| %>
+      <li><%= 哈哈 %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
   <br>
   电影名称
   <br>
